@@ -6,6 +6,32 @@
 --
 
 
+
+----------------------------------------------------
+-- Folders and FolderTypeMap
+
+
+delete from cr_folder_type_map
+where folder_id in (
+	select folder_id
+	from cr_folders
+	where package_id in (
+		select package_id
+		from apm_packages
+		where package_key = 'wiki'
+	)
+)
+
+
+delete from cr_folders
+where package_id in (
+	select package_id
+	from apm_packages
+	where package_key = 'wiki'
+);
+
+
+
 ----------------------------------------------------
 -- x-openacs-wiki
 
@@ -89,4 +115,19 @@ delete from cr_mime_types
 where label = 'Text - Markdown'
 ;
 
+
+
+----------------------------------------------------
+-- Package & folders
+
+
+
+-- delete from acs_object_context_index
+-- where object_id = 12515
+-- 	or ancestor_id = 12515
+-- ;
+
+
+-- delete from acs_objects
+-- where context_id = 12515;
 
