@@ -216,7 +216,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
                 <td valign="top" class="small">
 		  <a href="http://www.project-open.com/" class="right">
 		    Powered by <br>
-		    <span class=brandfirst>Project/</span><span class=brandsec>Open</span>
+<span class=brandsec>&#93;</span><span class=brandfirst>project-open</span><span class=brandsec>&#91;</span>
 		  </a>
 	 	</td>
               </tr>
