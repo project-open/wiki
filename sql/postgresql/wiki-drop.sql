@@ -20,7 +20,7 @@ where folder_id in (
 		from apm_packages
 		where package_key = 'wiki'
 	)
-)
+);
 
 
 delete from cr_folders
