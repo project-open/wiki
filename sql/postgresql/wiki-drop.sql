@@ -66,8 +66,7 @@ where live_revision in (
 
 
 delete from cr_revisions
-where mime_type = 'text/x-openacs-wiki'
-;
+where mime_type = 'text/x-openacs-wiki';
 
 delete from cr_mime_types
 where label = 'Text - Wiki'
@@ -120,14 +119,12 @@ where label = 'Text - Markdown'
 ----------------------------------------------------
 -- Package & folders
 
-
-
--- delete from acs_object_context_index
--- where object_id = 12515
--- 	or ancestor_id = 12515
--- ;
-
-
--- delete from acs_objects
--- where context_id = 12515;
+ 
+update acs_objects
+set context_id = null
+where context_id in (
+	select	package_id
+	from	apm_packages
+	where	package_key = 'wiki'
+);
 
