@@ -6,6 +6,75 @@
 --
 
 
+select	content_item__delete(item_id)
+from	(
+	select	content_folder__is_folder(item_id) as folder_p, 
+		item_id
+	from	cr_items
+	where	parent_id in (select folder_id from cr_folders where package_id in (select package_id from apm_packages where package_key = 'wiki'))
+	) t
+where	folder_p = 'f';
+
+
+select	content_folder__del(item_id,'t')
+from	(
+	select	content_folder__is_folder(item_id) as folder_p, 
+		item_id
+	from	cr_items
+	where	parent_id in (select folder_id from cr_folders where package_id in (select package_id from apm_packages where package_key = 'wiki'))
+	) t
+where	folder_p = 't';
+
+
+
+
+delete from acs_object_context_index
+where ancestor_id in (
+	select	object_id
+	from    acs_objects
+	where   context_id in (
+                        select  folder_id
+                        from    cr_folders
+                        where   package_id in (select package_id from apm_packages where package_key = 'wiki')
+		)
+);
+
+delete from acs_objects
+where context_id in (
+	select	object_id
+	from    acs_objects
+	where   context_id in (
+                        select  folder_id
+                        from    cr_folders
+                        where   package_id in (select package_id from apm_packages where package_key = 'wiki')
+		)
+);
+
+
+-- Seems right, but causes issue with "acs_object_context_index" acs_obj_context_idx_anc_id_fk
+select	content_item__delete(object_id)
+from	(
+	select	content_folder__is_folder(object_id) as folder_p, 
+		object_id
+	from    acs_objects
+	where   context_id in (
+                        select  folder_id
+                        from    cr_folders
+                        where   package_id in (select package_id from apm_packages where package_key = 'wiki')
+		)
+	) t
+where	folder_p = 'f';
+
+
+
+
+
+select	content_folder__del(folder_id, 't')
+from	cr_folders
+where	package_id in (select package_id from apm_packages where package_key = 'wiki');
+
+
+
 
 ----------------------------------------------------
 -- Folders and FolderTypeMap
@@ -69,8 +138,7 @@ delete from cr_revisions
 where mime_type = 'text/x-openacs-wiki';
 
 delete from cr_mime_types
-where label = 'Text - Wiki'
-;
+where label = 'Text - Wiki';
 
 
 ----------------------------------------------------
@@ -127,4 +195,20 @@ where context_id in (
 	from	apm_packages
 	where	package_key = 'wiki'
 );
+
+
+
+
+----------------------------------------------------
+-- 
+
+delete from acs_permissions
+where object_id in (
+	select package_id from apm_packages where package_key = 'wiki'
+);
+
+select apm_package__delete(
+       (select package_id from apm_packages where package_key = 'wiki')
+);
+
 
