@@ -323,7 +323,7 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
           <td> <table  border="0" cellspacing="0" cellpadding="5" width="100%">
               <tr> 
                 <td valign="top" width="7"><img src="http://www.project-open.com/images/navigation/arr_btn.jpg" width="12" height="13"></td>
-                <td valign="top" class="small"><a href="http://www.project-open.com/contact/index.html?t=requestmoreinfo" class="right">Request 
+                <td valign="top" class="small"><a href="http://www.project-open.com/en/contact" class="right">Request 
                   information!</a></td>
               </tr>
             </table></td>
@@ -389,50 +389,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
           <td></td>
         </tr>
       </table>
-
-
-
-
-
-
-      <table width="100%" border="0" cellspacing="0" cellpadding="0" background="../images/navigation/back_small.gif">
-        <tr> 
-          <td> <form name="quick_feedback" method="post" action="http://www.projop.com:30016/intranet-crm-tracking/quick-feedback">
-              <input type=hidden name="return_url" value="http://www.project-open.com/contact/thank_you.html">
-
-              <table width="100%" border="0" cellspacing="0" cellpadding="0" >
-                <tr class=background_dark> 
-                  <td class="capital" height="16"> &nbsp;&nbsp;Send Us Quick Feedback</td>
-                </tr>
-                <tr> 
-                  <td> <table border="0" cellspacing="0" cellpadding="0">
-                      <tr> 
-                        <td rowspan="5">&nbsp;&nbsp;</td>
-                        <td class="small"><strong>Name:</strong><br> <input name="name" value=""> 
-                        </td>
-                      </tr>
-                      <tr valign="top"> 
-                        <td  valign="middle" class="small"><strong>E-Mail:</strong><br> 
-                          <input name="email2" value=""></td>
-                      </tr>
-                      <tr> 
-                        <td class="small" valign="top"> <strong>Message:</strong><br> 
-                          <textarea name="message" cols="25" rows="4"></textarea> 
-                        </td>
-                      </tr>
-                      <tr valign="top"> 
-                        <td class="small"> &nbsp; <input name="button" type="button" onClick="document.forms[0].submit()" value="Send"> 
-                          <input name="reset" type="reset" value="reset"> <br> 
-                        </td>
-                      </tr>
-                    </table></td>
-                </tr>
-              </table>
-            </form></td>
-        </tr>
-      </table>
-
-
 
       <table width="100%" border="0" cellspacing="0" cellpadding="0" height="5" background="../images/navigation/back_small.gif">
         <tr> 
