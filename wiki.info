@@ -12,6 +12,7 @@
         <owner url="mailto:dave@thedesignexperience,org">Dave Bauer</owner>
         <owner url="mailto:frank.bergmann@project-open.com">Frank Bergmann</owner>
         <summary>Wiki</summary>
+        <release-date>2016-11-15</release-date>
         <description format="text/plain">Wiki implementation on the CR</description>
 
         <provides url="wiki" version="0.2d"/>
