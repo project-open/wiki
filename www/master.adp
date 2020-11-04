@@ -12,16 +12,7 @@
 </head>
 
 <body leftmargin="7" topmargin="0" marginwidth="7" marginheight="0">
-<!-- onload="HM_f_StartIt()"  -->
 
-<script language="JavaScript">
-<!--
-function MM_jumpMenu(targ,selObj,restore){ //v3.0
-  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
-  if (restore) selObj.selectedIndex=0;
-}
-//-->
-</script>
 <!-- start very top -->
 <table width="780" cellspacing="0" cellpadding="0" border="0"> 
   <tr>
@@ -34,14 +25,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
 	<img src="../images/logo.project-open.horiz.whi.gif" width="230" height="52" border="0">-->
       <a href="http://www.project-open.net/"><img src="http://www.project-open.com/images/topBanner.l10n-pm.jpg" width="780" height="80" border="0" alt="Project Management Best Practices Wiki"></a> 
     </td>
-	<!--<td align="right" bgcolor="#FFFFFF" valign="middle"><br><OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
- codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0"
- WIDTH="320" HEIGHT="60" id="banner_2" ALIGN="">
- <PARAM NAME=movie VALUE="../images/banner_2.swf"> <PARAM NAME=quality VALUE=high> <PARAM NAME=bgcolor VALUE=#CCCCCC> <EMBED src="../images/banner_2.swf" quality=high bgcolor=#CCCCCC  WIDTH="320" HEIGHT="60" NAME="banner_2" ALIGN=""
- TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED>
-</OBJECT>&nbsp;&nbsp;&nbsp;
-      
-    </td>-->
   </tr>
   <tr> 
     <td  valign="top" bgcolor="#FFFFFF" align="right" height="5" width="586" >&nbsp;</td>
@@ -68,22 +51,6 @@ function MM_jumpMenu(targ,selObj,restore){ //v3.0
       <img src="http://www.project-open.com/images/blank.gif" height="8" width="3"></font></td>
   </tr>
 </table>
-<!-- 
-<table width="780" border="0" cellspacing="0" cellpadding="0">
-  <tr> 
-    <td height="1" valign="middle" colspan="2" bgcolor="#FFFFFF"></td>
-  </tr>
-  <tr> 
-    <td height="79" width="181" background="../images/random/random_back1.gif"> 
-      <script language="JavaScript"> document.write ('<IMG SRC = ' + imageArray[randNum(imageArray.length)] + ' width="181" height="79" > ');</script>
-    </td>
-	<td height="79" width="586" background="../images/random/random_back1.gif"> 
-       <a href="../e/references/telekom_at.html" target="_top"><img src="../images/random/quote_e22.gif" border="0" width="586" height="79" alt="Telekom Austria"></a>
-
-    <td> 
-  </tr>
-</table>
--->
 
 <table width="780" cellspacing="0" cellpadding="0" border="0">
   <tr> 
